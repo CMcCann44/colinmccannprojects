@@ -3,126 +3,108 @@ from PIL import Image
 
 # streamlit run Home.py
 # Emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
-st.set_page_config(page_title='Colin McCann Webpage', page_icon=':desktop_computer:', layout='wide')
+st.set_page_config(page_title='Colin McCann', page_icon=':desktop_computer:', layout='wide')
 
 
-# Use local CSS
+# Use Local CSS
 def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 
-# --- LOAD ASSETS
-PythonVideo = Image.open('images/PythonVideo.jpg')
-CS50Video = Image.open('images/CS50Video.jpg')
-PandasVideo = Image.open('images/PandasVideo.jpg')
-StreamlitVideo = Image.open('images/StreamlitVideo.jpg')
-img_fig_2 = Image.open('images/Airport Fig2 (Delay vs Day of Week).png')
-img_fig_3 = Image.open('images/Airport Fig3 (Delay vs Airline).png')
-img_airport_group = Image.open('images/AirportGroup.jpg')
-Binghamton = Image.open('images/Binghamton.jpg')
-# img_name = Image.open('images/name.png')
+# Load Assets
+fig1 = Image.open('images/placeholder.png')
+# fig2 = Image.open('images/name.png')
+# fig3 = Image.open('images/name.png')
 
 
-# --- HEADER
+# === HEADER ===
 with st.container():
-    st.title('2023 WISE Website')
-    st.subheader('Colin McCann')
-    st.write('This is my final WISE project created using Python and a coding library called "Streamlit."')
-    st.write('I will take you through my different WISE projects, as well as my future plans.')
-    st.write('** For a more in-depth look into how this website was made, see the "Source Code" page. '
-             'This will show the exact code used to create each section of the main webpage.')
+    st.title('Colin McCann')
+    st.subheader('Updated 09/17/24')
+    st.write('Website created using Streamlit (Python library).')
 
 
-# === PAST ===
-# --- Research ---
+# === Projects ===
+# --- Website ---
 with st.container():
-    st.write('---')
-    st.header('Research')
-    st.write('##')
-    image_column, text_column = st.columns((1, 2))
+    image_column, text_column = st.columns(2)
     with image_column:
-        st.image(PythonVideo)
-    with text_column:
-        st.subheader('Python Tutorial - Python Full Course for Beginners')
-        st.write('Learned the basics of computer programming as well as many tips and tricks for Python in particular.')
-        st.markdown('[Full Video -->](https://www.youtube.com/watch?v=_uQrJ0TkZlc)')
-
-with st.container():
-    image_column, text_column = st.columns((1, 2))
-    with image_column:
-        st.image(CS50Video)
-    with text_column:
-        st.subheader('Harvard CS50 – Full Computer Science University Course')
-        st.write('Learned about how computers actually work, and many problem solving skills.')
-        st.markdown('[Full Video -->](https://www.youtube.com/watch?v=8mAITcNt710)')
-
-with st.container():
-    image_column, text_column = st.columns((1, 2))
-    with image_column:
-        st.image(PandasVideo)
-    with text_column:
-        st.subheader('Complete Python Pandas Data Science Tutorial!...')
-        st.write('I used pandas for WISE Airport project - learned how to work with large datasets in Pandas.')
-        st.markdown('[Full Video -->](https://www.youtube.com/watch?v=vmEHCJofslg)')
-
-with st.container():
-    image_column, text_column = st.columns((1, 2))
-    with image_column:
-        st.image(StreamlitVideo)
+        st.image(fig1)
     with text_column:
         st.subheader('Build a Website in only 12 minutes using Python & Streamlit')
-        st.write('Learned how to use StreamLit to create this very website you are looking at.')
+        st.write('Learned how to use StreamLit.')
         st.markdown('[Full Video -->](https://www.youtube.com/watch?v=VqgUkExPvLY)')
+        st.image(fig1)
 
 
-# === PRESENT ===
-# --- WISE AIRPORT ---
+# --- JFK Flight Data Analysis ---
 with st.container():
-    st.write('---')
     text_column, image_column = st.columns(2)
     with text_column:
-        st.header('WISE Airport')
+        st.subheader('JFK Flight Data Analysis')
         st.write('##')
-        st.subheader('Quarter 3 Group Project:')
-        st.write('Jenna Scanlan - Marketing')
-        st.write('Kaitlinn Campana - Engineering')
-        st.write('Colin McCann - Data Analysis')
+        st.write('Used Pandas to analyze large airport datasets and determine possible causes of flight delays.')
     with image_column:
-        st.image(img_airport_group)
-
+        st.image(fig1)
 
 with st.container():
     text_column, image_column = st.columns(2)
     with text_column:
-        st.subheader('Airport Data Analysis')
+        st.write('Performed chi-square and __ tests '
+                 'to determine if certain factors were significantly correlated with flight delay.')
+    with image_column:
+        st.image(fig1)
+
+
+# --- Stock Market Web Scraping ---
+
+
+
+# === IN PROGRESS ===
+# --- Minecraft Computer ---
+with st.container():
+    text_column, image_column = st.columns(2)
+    with text_column:
+        st.subheader('JFK Flight Data Analysis')
         st.write('##')
-        st.write('My section of the project involved analyzing large datasets of flight data '
-                 'to determine possible causes of flight delays.')
+        st.write('Analyzed large airport datasets to determine possible causes of flight delays.')
     with image_column:
-        st.image(img_fig_2)
+        st.image(fig1)
 
 with st.container():
     text_column, image_column = st.columns(2)
     with text_column:
-        st.write('Using a Python library called "pandas" and a excel file thousands of rows '
-                 'long that I found online, I could aggregate data into charts and graphs to '
-                 'observe any outliers or factors that may be correlated with flight delay.')
+        st.write('Used the Pandas library in Python to perform chi-square and __ tests '
+                 'to determine if any factors were significantly correlated with flight delay.')
     with image_column:
-        st.image(img_fig_3)
+        st.image(fig1)
+
+# --- Probability Distribution Generator ---
 
 
-# === FUTURE ===
+# === BU ===
 # --- College ---
 with st.container():
     st.write('---')
-    st.header('College/Future Plans')
+    st.header('College')
     image_column, text_column = st.columns(2)
     with image_column:
-        st.image(Binghamton)
+        st.image(fig1)
     with text_column:
-        st.write('This fall, I will attend Binghamton University with a major '
-                 'in biochemistry and a minor in music.')
-        st.write('Although I do not plan to get any degree in computer science, '
-                 'I hope to find the time to at least take a few courses to further '
-                 'my knowledge in computer science')
+        st.write('Math major, CS minor.')
+        st.write('Courses taken: Calculus I-III, Linear Algebra, Number Systems, Probability Theory, '
+                 'Mathematical Statistics, Programming and Hardware Fundamentals')
+
+# --- Coursera ---
+with st.container():
+    st.write('---')
+    st.header('Past Projects')
+    st.write('##')
+    image_column, text_column = st.columns((1, 2))
+    with image_column:
+        st.image(fig1)
+    with text_column:
+        st.subheader('')
+        st.write('Learned the basics of Python.')
+        st.markdown('[Full Video -->](https://www.youtube.com/watch?v=_uQrJ0TkZlc)')
