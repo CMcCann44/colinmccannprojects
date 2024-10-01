@@ -5,12 +5,10 @@ from PIL import Image
 # Emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config(page_title='Colin McCann', page_icon=':desktop_computer:', layout='wide')
 
-
 # Use Local CSS
 def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
-
 
 # Load Assets
 fig1 = Image.open('images/placeholder.png')
@@ -18,67 +16,59 @@ fig1 = Image.open('images/placeholder.png')
 # fig3 = Image.open('images/name.png')
 
 
-# === HEADER ===
+# === Header ===
 with st.container():
-    st.title('Colin McCann')
-    st.subheader('Updated 09/17/24')
-    st.write('Website created using Streamlit (Python library).')
+    st.title('Colin McCann - Projects')
+    st.write('Data Science Major at Binghamton University')
+    text_column1, text_column2 = st.columns(2)
+    with text_column1:
+        st.markdown('[LinkedIn](https://www.linkedin.com/in/colin-mccann-1979922a3/)')
+    with text_column1:
+        st.markdown('[Github](https://github.com/CMcCann44)')
 
 
 # === Projects ===
-# --- Website ---
-with st.container():
-    image_column, text_column = st.columns(2)
-    with image_column:
-        st.image(fig1)
-    with text_column:
-        st.subheader('Build a Website in only 12 minutes using Python & Streamlit')
-        st.write('Learned how to use StreamLit.')
-        st.markdown('[Full Video -->](https://www.youtube.com/watch?v=VqgUkExPvLY)')
-        st.image(fig1)
-
-
 # --- JFK Flight Data Analysis ---
 with st.container():
+    st.write('---')
     text_column, image_column = st.columns(2)
     with text_column:
-        st.subheader('JFK Flight Data Analysis')
-        st.write('##')
-        st.write('Used Pandas to analyze large airport datasets and determine possible causes of flight delays.')
+        st.subheader('Airport Flight Data Analysis')
+        st.write('Used Pandas to analyze large JFK airport datasets with >100,000 entries and determine possible causes of flight delays.')
+        st.write('Performed chi-square and t-tests to determine if certain factors were significantly correlated with flight delay, '
+                 'such as day of the week, flight destination, airline, etc.')
     with image_column:
         st.image(fig1)
 
+# --- Stock Market Web Scraping ---
 with st.container():
     text_column, image_column = st.columns(2)
     with text_column:
-        st.write('Performed chi-square and __ tests '
-                 'to determine if certain factors were significantly correlated with flight delay.')
+        st.subheader('Stock Market Web Scraping')
+        st.write('Used yFinance and BeautifulSoup to scrape and parse web stock data. '
+                 'Also used Pandas and Plotly to create graphs showing stock trends.')
     with image_column:
         st.image(fig1)
 
-
-# --- Stock Market Web Scraping ---
-
-
-
-# === IN PROGRESS ===
 # --- Minecraft Computer ---
 with st.container():
     text_column, image_column = st.columns(2)
     with text_column:
-        st.subheader('JFK Flight Data Analysis')
-        st.write('##')
-        st.write('Analyzed large airport datasets to determine possible causes of flight delays.')
+        st.subheader('Minecraft Computer')
+        st.write('Built original design for a 4-bit adder and register using in-game wiring system. Working on an original 16-bit CPU.')
     with image_column:
         st.image(fig1)
 
+# --- Ellipsoid Recoding for Classification Machine Learning ---
 with st.container():
     text_column, image_column = st.columns(2)
     with text_column:
-        st.write('Used the Pandas library in Python to perform chi-square and __ tests '
-                 'to determine if any factors were significantly correlated with flight delay.')
+        st.subheader('Ellipsoid Recoding for Classification Machine Learning Models (current)')
+        st.write('As part of research projects with Dr. Singh and Dr. Kurtz at Binghamton University. '
+                 'Working on an ellipse-based recoding method and a pairwise relational feature recoding.')
     with image_column:
         st.image(fig1)
+
 
 # --- Probability Distribution Generator ---
 
@@ -88,23 +78,20 @@ with st.container():
 with st.container():
     st.write('---')
     st.header('College')
-    image_column, text_column = st.columns(2)
-    with image_column:
-        st.image(fig1)
-    with text_column:
-        st.write('Math major, CS minor.')
-        st.write('Courses taken: Calculus I-III, Linear Algebra, Number Systems, Probability Theory, '
-                 'Mathematical Statistics, Programming and Hardware Fundamentals')
+    st.write('Math/data science major, CS minor at Binghamton University')
+    st.subheader('Courses Taken:')
+    st.write('Calculus I-III, Linear Algebra, Number Systems, '
+            'Programming and Hardware Fundamentals, Probability Theory')
 
 # --- Coursera ---
 with st.container():
     st.write('---')
-    st.header('Past Projects')
-    st.write('##')
-    image_column, text_column = st.columns((1, 2))
-    with image_column:
-        st.image(fig1)
-    with text_column:
-        st.subheader('')
-        st.write('Learned the basics of Python.')
-        st.markdown('[Full Video -->](https://www.youtube.com/watch?v=_uQrJ0TkZlc)')
+    st.header('Coursera')
+    st.write('Learned Python for data science through 5 courses.')
+
+# === Footer ===
+with st.container():
+    st.write('---')
+    st.write('Deployed 10/01/24. Updated 09/29/24.')
+    st.write('Website created using Streamlit in Python.')
+    st.markdown('[How I learned StreamLit -->](https://www.youtube.com/watch?v=VqgUkExPvLY)')
