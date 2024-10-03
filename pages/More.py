@@ -18,29 +18,14 @@ with st.container():
     st.header('Minecraft Computer')
 
 with st.container():
-    text_column, image_column = st.columns(2)
-    with text_column():
+    text_column1, text_column2 = st.columns(2)
+    with text_column1:
         st.subheader('Original Full Adder')
-    with image_column():
         st.image(full_adder_fig)
-
-with st.container():
-    text_column, image_column = st.columns(2)
-    with text_column():
+    with text_column2:
         st.subheader('Original Multiplexer')
-    with image_column():
         st.image(mux_fig)
-
-
-#with st.container():
-    #text_column1, text_column2 = st.columns(2)
-    #with text_column1():
-        #st.subheader('Original SR Latch')
-        #st.image(sr_latch_fig)
-    #with text_column2():
-        #st.subheader('Original Register')
-        #st.image(register_fig)
 
 with st.container():
     st.header('Ellipse Recoding')
-    st.subheader('More info to come')
+    st.write('More info to come')
