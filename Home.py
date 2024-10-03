@@ -7,7 +7,7 @@ from PIL import Image
 # git push -u origin main
 
 # Emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
-st.set_page_config(page_title='Colin McCann', page_icon=':desktop_computer:', layout='wide')
+st.set_page_config(page_title='Colin McCann Projects', page_icon=':desktop_computer:', layout='wide')
 
 # Use Local CSS
 def local_css(file_name):
@@ -16,7 +16,7 @@ def local_css(file_name):
 
 # Load Assets
 fig1 = Image.open('images/placeholder.png')
-airline_fig = Image.open('images/AirportFig1.png')
+flight_destination_fig = Image.open('images/AirportFig1.png')
 day_of_week_fig = Image.open('images/AirportFig2.png')
 stock_fig = Image.open('images/stockgraph.png')
 minecomputer_fig = Image.open('images/FullAdder.png')
@@ -29,7 +29,7 @@ with st.container():
     st.write('Data Science Major at Binghamton University')
     text_column1, text_column2 = st.columns(2)
     with text_column1:
-        st.markdown('[LinkedIn](https://www.linkedin.com/in/colin-mccann-1979922a3/)')
+        st.markdown('[LinkedIn](https://www.linkedin.com/in/cmccann2)')
     with text_column1:
         st.markdown('[Github](https://github.com/CMcCann44)')
 
@@ -43,9 +43,9 @@ with st.container():
         st.subheader('Airport Flight Data Analysis')
         st.write('Used Pandas to analyze large JFK airport datasets with >25,000 entries and determine possible causes of flight delays.')
         st.write('Performed chi-square and t-tests to determine if certain factors were significantly correlated with flight delay, '
-                 'such as day of the week, flight destination, airline, etc.')
+                 'such as day of the week, flight destination (graph shown on right), airline, etc.')
     with image_column:
-        st.image(airline_fig)
+        st.image(flight_destination_fig)
 
 # --- Stock Market Web Scraping ---
 with st.container():
