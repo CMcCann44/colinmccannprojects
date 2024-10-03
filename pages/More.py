@@ -1,6 +1,8 @@
 import streamlit as st
 from PIL import Image
 
+st.set_page_config(page_title='More', page_icon=':desktop_computer:', layout='wide')
+
 # --- LOAD ASSETS
 fig1 = Image.open('images/placeholder.png')
 full_adder_fig = Image.open('images/FullAdder.png')
@@ -14,13 +16,21 @@ mux_fig = Image.open('images/Mux.png')
 with st.container():
     st.title('More Detail on Current Projects')
     st.header('Minecraft Computer')
-    text_column1, text_column2 = st.columns(2)
-    with text_column1():
+
+with st.container():
+    text_column, image_column = st.columns(2)
+    with text_column():
         st.subheader('Original Full Adder')
+    with image_column():
         st.image(full_adder_fig)
-    with text_column2():
+
+with st.container():
+    text_column, image_column = st.columns(2)
+    with text_column():
         st.subheader('Original Multiplexer')
+    with image_column():
         st.image(mux_fig)
+
 
 #with st.container():
     #text_column1, text_column2 = st.columns(2)
