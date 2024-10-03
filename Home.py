@@ -4,7 +4,6 @@ from PIL import Image
 # streamlit run Home.py
 # git add .
 # git commit -m "message"
-# git branch -M main
 # git push -u origin main
 
 # Emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
@@ -63,14 +62,14 @@ with st.container():
     text_column, image_column = st.columns(2)
     with text_column:
         st.subheader('Minecraft Computer')
-        st.write('Built original adder and register using in-game wiring system.')
+        st.write('Built original adder (shown on right) and register using in-game wiring system.')
         st.write('Working on an original 4-bit CPU.')
     with image_column:
         st.image(minecomputer_fig)
 
 # --- Ellipsoid Recoding for Classification Machine Learning ---
 with st.container():
-    st.subheader('Ellipsoid Recoding for Classification Machine Learning Models (current)')
+    st.subheader('Ellipsoid Recoding for Classification Machine Learning Models (Current)')
     st.write('As part of research projects with Dr. Singh and Dr. Kurtz at Binghamton University.')
     st.write('Working on an ellipse-based recoding method and a pairwise relational feature recoding.')
 
@@ -98,6 +97,6 @@ with st.container():
 # === Footer ===
 with st.container():
     st.write('---')
-    st.write('Deployed 10/01/24. Updated 09/29/24.')
     st.write('Website created using Streamlit in Python.')
+    st.write('Deployed 10/3/24. Last updated 10/3/24.')
     st.markdown('[How I learned StreamLit -->](https://www.youtube.com/watch?v=VqgUkExPvLY)')
