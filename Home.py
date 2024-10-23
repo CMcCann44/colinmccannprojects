@@ -4,7 +4,8 @@ from PIL import Image
 # streamlit run Home.py
 # git add .
 # git commit -m "message"
-# git push -u origin main
+# git push heroku main
+# (git push -u origin main)
 
 # Emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config(page_title='Colin McCann Projects', page_icon=':desktop_computer:', layout='wide')
@@ -66,9 +67,9 @@ with st.container():
 
 # --- Ellipsoid Recoding for Classification Machine Learning ---
 with st.container():
-    st.subheader('Ellipsoid Recoding for Classification Machine Learning Models (Current)')
+    st.subheader('Recodings for Classification Machine Learning Models (Current)')
     st.write('As part of research projects with Dr. Singh and Dr. Kurtz at Binghamton University.')
-    st.write('Working on an ellipse-based recoding method and a pairwise relational feature recoding.')
+#    st.write('Working on an ellipse-based recoding method and a pairwise relational feature recoding.')
 
 
 # --- Probability Distribution Generator ---
@@ -95,5 +96,5 @@ with st.container():
 with st.container():
     st.write('---')
     st.write('Website created using Streamlit in Python.')
-    st.write('Deployed 10/3/24. Last updated 10/3/24.')
+    st.write('Deployed 10/23/24. Last updated 10/23/24.')
     st.markdown('[How I learned StreamLit -->](https://www.youtube.com/watch?v=VqgUkExPvLY)')
