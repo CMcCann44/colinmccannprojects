@@ -27,11 +27,8 @@ minecomputer_fig = Image.open('images/FullAdder.png')
 with st.container():
     st.title('Colin McCann - Projects')
     st.write('Data Science Major at Binghamton University')
-    text_column1, text_column2 = st.columns(2)
-    with text_column1:
-        st.markdown('[LinkedIn](https://www.linkedin.com/in/cmccann2)')
-    with text_column2:
-        st.markdown('[Github](https://github.com/CMcCann44)')
+    st.markdown('[LinkedIn](https://www.linkedin.com/in/cmccann2)')
+    st.markdown('[Github](https://github.com/CMcCann44)')
 
 
 # === Projects ===
