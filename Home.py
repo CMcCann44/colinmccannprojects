@@ -1,14 +1,14 @@
 import streamlit as st
 from PIL import Image
 
-# streamlit run Home.py
-# git add .
+# To test: streamlit run Home.py
+# To deploy: git add .
 # git commit -m "message"
 # git push heroku main
 # (git push -u origin main)
 
 # Emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
-st.set_page_config(page_title='Colin McCann Projects', page_icon=':desktop_computer:', layout='wide')
+st.set_page_config(page_title='Colin McCann - Projects', page_icon=':desktop_computer:', layout='wide')
 
 # Use Local CSS
 def local_css(file_name):
@@ -27,7 +27,7 @@ minecomputer_fig = Image.open('images/FullAdder.png')
 # === Header ===
 with st.container():
     st.title('Colin McCann - Projects')
-    st.write('Data Science Major at Binghamton University')
+    st.write('Math/statistics Major at Binghamton University')
     st.markdown('[LinkedIn](https://www.linkedin.com/in/cmccann2)')
     st.markdown('[Github](https://github.com/CMcCann44)')
 
@@ -61,11 +61,11 @@ with st.container():
     with text_column:
         st.subheader('Minecraft Computer')
         st.write('Built original adder (shown on right) and register using in-game wiring system.')
-        st.write('Working on an original 4-bit CPU.')
+        st.write('Working on an original 8-bit CPU.')
     with image_column:
         st.image(minecomputer_fig)
 
-# --- Ellipsoid Recoding for Classification Machine Learning ---
+# --- Classification Machine Learning ---
 with st.container():
     st.subheader('Recodings for Classification Machine Learning Models (Current)')
     st.write('As part of research projects with Dr. Singh and Dr. Kurtz at Binghamton University.')
@@ -76,15 +76,17 @@ with st.container():
 
 
 
-# === BU ===
+# === Education ===
 # --- College ---
 with st.container():
     st.write('---')
     st.header('College')
-    st.write('Math/data science major, CS minor at Binghamton University')
+    st.write('Math/data science major and CS minor at Binghamton University')
     st.subheader('Courses Taken')
     st.write('Calculus I-III, Linear Algebra, Number Systems, '
-            'Programming and Hardware Fundamentals, Probability Theory')
+            'Programming and Hardware Fundamentals, Probability Theory, ')
+            # 'Advanced Linear Algebra, Mathematical Statistics')
+            # 'Real Analysis, Regression Models, Computing')
 
 # --- Coursera ---
 with st.container():
