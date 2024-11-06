@@ -27,5 +27,5 @@ with st.container():
         st.image(mux_fig)
 
 with st.container():
-    st.header('Ellipse Recoding')
+    st.header('Machine Learning Classification Models')
     st.write('More info to come')

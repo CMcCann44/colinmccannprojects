@@ -98,5 +98,5 @@ with st.container():
 with st.container():
     st.write('---')
     st.write('Website created using Streamlit in Python.')
-    st.write('Deployed 10/23/24. Last updated 10/23/24.')
+    st.write('Deployed 10/23/24. Last updated 11/06/24.')
     st.markdown('[How I learned StreamLit -->](https://www.youtube.com/watch?v=VqgUkExPvLY)')
