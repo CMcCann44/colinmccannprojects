@@ -68,8 +68,8 @@ with st.container():
 # --- Classification Machine Learning ---
 with st.container():
     st.subheader('Recodings for Classification Machine Learning Models (Current)')
-    st.write('As part of research projects with Dr. Singh and Dr. Kurtz at Binghamton University.')
-#    st.write('Working on an ellipse-based recoding method and a pairwise relational feature recoding.')
+    st.write('As part of research projects with Dr. Kurtz at Binghamton University.')
+    st.write('Currently playing around with activation rules such as using an ellipse-based hidden layer.')
 
 
 # --- Probability Distribution Generator ---
@@ -84,9 +84,9 @@ with st.container():
     st.write('Math/data science major and CS minor at Binghamton University')
     st.subheader('Courses Taken')
     st.write('Calculus I-III, Linear Algebra, Number Systems, '
-            'Programming and Hardware Fundamentals, Probability Theory, ')
-            # 'Advanced Linear Algebra, Mathematical Statistics')
-            # 'Real Analysis, Regression Models, Computing')
+            'Programming and Hardware Fundamentals, Probability Theory, '
+            'Advanced Linear Algebra, Complex Analysis, Object Oriented Programming.')
+            # 'Real Analysis, Mathematical Statistics, Computing')
 
 # --- Coursera ---
 with st.container():
@@ -98,5 +98,5 @@ with st.container():
 with st.container():
     st.write('---')
     st.write('Website created using Streamlit in Python.')
-    st.write('Deployed 10/23/24. Last updated 11/06/24.')
+    st.write('Deployed 10/23/24. Last updated 2/17/25.')
     st.markdown('[How I learned StreamLit -->](https://www.youtube.com/watch?v=VqgUkExPvLY)')
