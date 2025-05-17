@@ -4,6 +4,7 @@ from PIL import Image
 # To test: streamlit run Home.py
 # To deploy: git add .
 # git commit -m "message"
+# heroku login
 # git push heroku main
 # (git push -u origin main)
 
@@ -72,7 +73,7 @@ with st.container():
     st.write('Currently playing around with activation rules such as using an ellipse-based hidden layer.')
 
 
-# --- Probability Distribution Generator ---
+# --- Machine Learning ---
 
 
 
@@ -98,5 +99,5 @@ with st.container():
 with st.container():
     st.write('---')
     st.write('Website created using Streamlit in Python.')
-    st.write('Deployed 10/23/24. Last updated 2/17/25.')
-    st.markdown('[How I learned StreamLit -->](https://www.youtube.com/watch?v=VqgUkExPvLY)')
+    st.write('Deployed 10/23/24. Last updated 5/17/25.')
+    # st.markdown('[How I learned StreamLit -->](https://www.youtube.com/watch?v=VqgUkExPvLY)')
